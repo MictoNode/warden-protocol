@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Hedef block yüksekliği
-TARGET_BLOCK=1675700
+TARGET_BLOCK=1675701
 
 while true; do
     # Local node block yüksekliğini al
