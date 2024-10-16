@@ -12,6 +12,40 @@ printLine() {
     echo "------------------------------"
 }
 
+# Instruction message
+print_instructions() {
+    echo -e "${GREEN}Please make sure that the following settings are in your 'app.toml' file:${NC}"
+    echo "###############################################################################"
+    echo "###                                  Oracle                                 ###"
+    echo "###############################################################################"
+    echo "[oracle]"
+    echo "# Enabled indicates whether the oracle is enabled."
+    echo 'enabled = "true"'
+    echo ""
+    echo "# Oracle Address is the URL of the out-of-process oracle sidecar. This is used to"
+    echo "# connect to the oracle sidecar when the application boots up. Note that the address"
+    echo "# can be modified at any point, but will only take effect after the application is"
+    echo "# restarted. This can be the address of an oracle container running on the same"
+    echo "# machine or a remote machine."
+    echo 'oracle_address = "127.0.0.1:8080"'
+    echo ""
+    echo "# Client Timeout is the time that the client is willing to wait for responses from"
+    echo "# the oracle before timing out."
+    echo 'client_timeout = "2s"'
+    echo ""
+    echo "# MetricsEnabled determines whether oracle metrics are enabled. Specifically"
+    echo "# this enables instrumentation of the oracle client and the interaction between"
+    echo "# the oracle and the app."
+    echo 'metrics_enabled = "true"'
+    echo ""
+    echo -e "${GREEN}Then, restart the Warden and Slinky services:${NC}"
+    echo "1. Restart the services:"
+    echo "   sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd"
+    echo ""
+    echo "To view the service logs:"
+    echo "   journalctl -fu slinkyd --no-hostname"
+}
+
 # Get PORT information from the user
 read -p "Enter your PORT (2-digit): " PORT
 echo 'export PORT='$PORT
@@ -74,55 +108,12 @@ sudo systemctl start slinkyd
 echo -e "${GREEN}Displaying Slinky logs...${NC}" && sleep 1
 journalctl -fu slinkyd --no-hostname &
 
-# Instruction message
-print_instructions() {
-    echo -e "${GREEN}Please make sure that the following settings are in your 'app.toml' file:${NC}"
-    echo "###############################################################################"
-    echo "###                                  Oracle                                 ###"
-    echo "###############################################################################"
-    echo "[oracle]"
-    echo "# Enabled indicates whether the oracle is enabled."
-    echo 'enabled = "true"'
-    echo ""
-    echo "# Oracle Address is the URL of the out-of-process oracle sidecar. This is used to"
-    echo "# connect to the oracle sidecar when the application boots up. Note that the address"
-    echo "# can be modified at any point, but will only take effect after the application is"
-    echo "# restarted. This can be the address of an oracle container running on the same"
-    echo "# machine or a remote machine."
-    echo 'oracle_address = "127.0.0.1:8080"'
-    echo ""
-    echo "# Client Timeout is the time that the client is willing to wait for responses from"
-    echo "# the oracle before timing out."
-    echo 'client_timeout = "2s"'
-    echo ""
-    echo "# MetricsEnabled determines whether oracle metrics are enabled. Specifically"
-    echo "# this enables instrumentation of the oracle client and the interaction between"
-    echo "# the oracle and the app."
-    echo 'metrics_enabled = "true"'
-    echo ""
-    echo -e "${GREEN}Then, restart the Warden and Slinky services:${NC}"
-    echo "1. Restart the services:"
-    echo "   sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd"
-    echo ""
-    echo "To view the service logs:"
-    echo "   journalctl -fu slinkyd --no-hostname"
-}
-
 # Display instructions to the user
 print_instructions
 
-# Ask the user if they have completed the settings
-read -p "Have you completed the settings? (Y/N): " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
-    # Restart the services
-    echo -e "${GREEN}Restarting the services...${NC}" && sleep 1
-    sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd
+echo -e "${GREEN}Restarting the services...${NC}" && sleep 1
+sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd
     
-    # Show Slinky logs
-    echo -e "${GREEN}Displaying Slinky logs...${NC}"
-    journalctl -fu slinkyd --no-hostname
-else
-    echo -e "${GREEN}Please complete the settings and run the script again.${NC}" && sleep 1
-    exit 1
-fi
+echo -e "${GREEN}Slinky logs command ${NC}"
+echo -e "${GREEN}journalctl -fu slinkyd --no-hostname ${NC}"
 
