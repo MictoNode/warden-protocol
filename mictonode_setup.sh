@@ -62,11 +62,6 @@ function printMictoNode {
 # MICTONODE logosunu göster
 printMictoNode
 
-# Renkli çıktı için yardımcı fonksiyonlar
-function printGreen {
-  echo -e "${GREEN}${1}${NC}"
-}
-
 # Paket ve bağımlılıkların yüklenmesi
 printGreen "1. Updating and installing dependencies..."
 sudo apt update && sudo apt upgrade -y

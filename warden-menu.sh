@@ -78,7 +78,7 @@ show_menu() {
 # Function to download and run a script from GitHub
 run_script_from_github() {
     local url=$1
-    local script_name="temp_script.sh"
+    local script_name="micto.sh"
 
     # Remove old script (if exists)
     [ -f $script_name ] && rm -f $script_name
@@ -116,15 +116,15 @@ while true; do
 
     case $choice in
         1)
-            echo "Running Warden Install script..."
+            echo "Running Warden Install..."
             run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/mictonode_setup.sh"
             ;;
         2)
-            echo "Running Slinky Install script..."
+            echo "Running Slinky Install..."
             run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/slinky-setup.sh"
             ;;
         3)
-            echo "Running Sync Check script..."
+            echo "Running Sync Check..."
             run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/checksync.sh"
             ;;
         4)
