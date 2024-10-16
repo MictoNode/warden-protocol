@@ -206,4 +206,5 @@ fi
 # Servisi başlatma
 sudo systemctl daemon-reload
 sudo systemctl restart wardend
-sudo journalctl -u wardend -f -o cat
+
+printGreen "Check logs: sudo journalctl -u wardend -f -o cat" && sleep 10
