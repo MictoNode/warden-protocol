@@ -1,5 +1,13 @@
 #!/bin/bash
 
+printGreen() {
+    echo -e "\033[32m$1\033[0m"
+}
+
+printLine() {
+    echo "------------------------------"
+}
+
 while true; do
   local_height=$(wardend status | jq -r '.sync_info.latest_block_height')
   network_height=$(curl -s https://warden-testnet-rpc.mictonode.com/status | jq -r '.result.sync_info.latest_block_height')
