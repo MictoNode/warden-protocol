@@ -1,5 +1,13 @@
 #!/bin/bash
 
+printGreen() {
+    echo -e "\033[32m$1\033[0m"
+}
+
+printLine() {
+    echo "------------------------------"
+}
+
 # MICTONODE ASCII logosunu gösterme fonksiyonu
 function printMictoNode {
   echo -e "${GREEN}"
