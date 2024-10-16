@@ -109,3 +109,4 @@ else
     echo -e "${GREEN}Please complete the settings and run the script again.${NC}" && sleep 1
     exit 1
 fi
+
