@@ -114,6 +114,6 @@ print_instructions
 echo -e "${GREEN}Restarting the services...${NC}" && sleep 1
 sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd
     
-echo -e "${GREEN}Slinky logs command ${NC}"
-echo -e "${GREEN}journalctl -fu slinkyd --no-hostname ${NC}"
+echo -e "${GREEN} You're Ready! ${NC}"
+
 
