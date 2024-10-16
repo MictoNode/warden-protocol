@@ -4,6 +4,14 @@
 GREEN="\e[1m\e[1;32m"
 NC="\e[0m"
 
+printGreen() {
+    echo -e "\033[32m$1\033[0m"
+}
+
+printLine() {
+    echo "------------------------------"
+}
+
 # Get PORT information from the user
 read -p "Enter your PORT (2-digit): " PORT
 echo 'export PORT='$PORT
