@@ -104,15 +104,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable slinkyd
 sudo systemctl start slinkyd
 
-# Show Slinky logs
-echo -e "${GREEN}Displaying Slinky logs...${NC}" && sleep 1
-journalctl -fu slinkyd --no-hostname &
-
 # Display instructions to the user
 print_instructions
-
-echo -e "${GREEN}Restarting the services...${NC}" && sleep 1
-sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd
     
 echo -e "${GREEN} You're Ready! ${NC}"
 
