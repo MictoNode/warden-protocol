@@ -88,6 +88,12 @@ run_script_from_github() {
 
     # Check if the script was downloaded
     if [ -f $script_name ]; then
+        # Ensure dos2unix is installed
+        check_and_install_dos2unix
+
+        # Convert to Unix format (LF)
+        dos2unix $script_name
+
         # Make the script executable
         chmod +x $script_name
         
@@ -98,6 +104,13 @@ run_script_from_github() {
         rm -f $script_name
     else
         echo "Failed to download the script!"
+    fi
+}
+
+check_and_install_dos2unix() {
+    if ! command -v dos2unix &> /dev/null; then
+        echo "dos2unix is not installed. Installing..."
+        sudo apt-get install -y dos2unix
     fi
 }
 
