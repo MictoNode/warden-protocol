@@ -109,15 +109,15 @@ while true; do
     case $choice in
         1)
             echo "Running Warden Install script..."
-            run_script_from_github "https://raw.githubusercontent.com/your-username/repository-name/branch-name/script1.sh"
+            run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/mictonode_setup.sh"
             ;;
         2)
             echo "Running Slinky Install script..."
-            run_script_from_github "https://raw.githubusercontent.com/your-username/repository-name/branch-name/script2.sh"
+            run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/slinky-setup.sh"
             ;;
         3)
             echo "Running Sync Check script..."
-            run_script_from_github "https://raw.githubusercontent.com/your-username/repository-name/branch-name/script3.sh"
+            run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/checksync.sh"
             ;;
         4)
             echo "Exiting..."
