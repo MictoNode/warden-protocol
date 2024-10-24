@@ -47,11 +47,11 @@ print_instructions() {
 }
 
 # Get PORT information from the user
-read -p "Enter your PORT (3-digit): " PORT
-echo 'export PORT='$PORT
+read -p "Enter your PORT (3-digit): " W_PORT
+echo 'export W_PORT='$W_PORT
 
 # Add the PORT information to the .bash_profile
-echo "export WARDEN_PORT="$PORT"" >> $HOME/.bash_profile
+echo "export W_PORT="$W_PORT"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 # Go kurulumunu gerçekleştirme
@@ -89,7 +89,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which slinky) --market-map-endpoint 127.0.0.1:${WARDEN_PORT}090
+ExecStart=$(which slinky) --market-map-endpoint 127.0.0.1:${W_PORT}090
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535

@@ -68,25 +68,25 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 # kullanıcı girdileri
-read -p "Enter WALLET name:" WALLET
-echo 'export WALLET='$WALLET
-read -p "Enter your MONIKER :" MONIKER
-echo 'export MONIKER='$MONIKER
-read -p "Enter your PORT (3-digit) :" PORT
-echo 'export PORT='$PORT
+read -p "Enter WALLET name:" W_WALLET
+echo 'export W_WALLET='$W_WALLET
+read -p "Enter your MONIKER :" W_MONIKER
+echo 'export W_MONIKER='$W_MONIKER
+read -p "Enter your PORT (3-digit) :" W_PORT
+echo 'export W_PORT='$W_PORT
 
 # varyasyonları ayarlama
-echo "export WALLET="$WALLET"" >> $HOME/.bash_profile
-echo "export MONIKER="$MONIKER"" >> $HOME/.bash_profile
+echo "export WALLET="$W_MONIKER"" >> $HOME/.bash_profile
+echo "export MONIKER="$W_MONIKER"" >> $HOME/.bash_profile
 echo "export WARDEN_CHAIN_ID="chiado_10010-1"" >> $HOME/.bash_profile
-echo "export WARDEN_PORT="$PORT"" >> $HOME/.bash_profile
+echo "export WARDEN_PORT="$W_PORT"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 printLine
-echo -e "Moniker:        \e[1m\e[32m$MONIKER\e[0m"
-echo -e "Wallet:         \e[1m\e[32m$WALLET\e[0m"
+echo -e "Moniker:        \e[1m\e[32m$W_MONIKER\e[0m"
+echo -e "Wallet:         \e[1m\e[32m$W_WALLET\e[0m"
 echo -e "Chain id:       \e[1m\e[32m$WARDEN_CHAIN_ID\e[0m"
-echo -e "Node custom port:  \e[1m\e[32m$WARDEN_PORT\e[0m"
+echo -e "Node custom port:  \e[1m\e[32m$W_PORT\e[0m"
 printLine
 sleep 1
 
@@ -156,7 +156,7 @@ printGreen "6. Initializing the node..."
 wardend config set client chain-id ${WARDEN_CHAIN_ID}
 wardend config set client keyring-backend test
 wardend config set client node tcp://localhost:${W_PORT}57
-wardend init ${MONIKER} --chain-id ${WARDEN_CHAIN_ID}
+wardend init ${W_MONIKER} --chain-id ${WARDEN_CHAIN_ID}
 
 # Genesis ve Addrbook dosyalarının indirilmesi
 printGreen "7. Downloading genesis and addrbook..."
