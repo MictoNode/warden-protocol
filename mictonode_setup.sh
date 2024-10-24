@@ -175,7 +175,7 @@ s%:8546%:${W_PORT}46%g;
 s%:6065%:${W_PORT}65%g" $HOME/.warden/config/app.toml
 
 # P2P ve port yapılandırması
-sed -i.bak -e "s%:26658%:${W_PORT}658%g;
+sed -i.bak -e "s%:26658%:${W_PORT}58%g;
 s%:26657%:${W_PORT}57%g;
 s%:6060%:${W_PORT}60%g;
 s%:26656%:${W_PORT}56%g;
