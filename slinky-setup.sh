@@ -49,7 +49,7 @@ print_instructions() {
 }
 
 # Get PORT information from the user
-read -p "Enter your PORT (3-digit): " W_PORT
+read -p "Enter your PORT (3-digit-port on the Warden): " W_PORT
 echo 'export W_PORT='$W_PORT
 
 # Add the PORT information to the .bash_profile
