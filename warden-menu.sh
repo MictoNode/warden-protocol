@@ -141,8 +141,8 @@ while true; do
             run_script_from_github "https://raw.githubusercontent.com/MictoNode/warden-protocol/refs/heads/main/checksync.sh"
             ;;
         4)
-            echo "Exiting..."
-            exit 0
+            echo "Exiting menu..."
+            break
             ;;
         *)
             echo "Invalid choice, please try again."
