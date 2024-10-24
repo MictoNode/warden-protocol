@@ -47,7 +47,7 @@ print_instructions() {
 }
 
 # Get PORT information from the user
-read -p "Enter your PORT (2-digit): " PORT
+read -p "Enter your PORT (3-digit): " PORT
 echo 'export PORT='$PORT
 
 # Add the PORT information to the .bash_profile
@@ -76,7 +76,7 @@ cd $HOME
 rm -rf slinky
 git clone https://github.com/skip-mev/slinky.git
 cd slinky
-git checkout v1.0.5
+git checkout v1.0.12
 make build
 sudo mv build/slinky /usr/local/bin/
 
