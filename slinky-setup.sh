@@ -27,7 +27,7 @@ print_instructions() {
     echo "# can be modified at any point, but will only take effect after the application is"
     echo "# restarted. This can be the address of an oracle container running on the same"
     echo "# machine or a remote machine."
-    echo 'oracle_address = "127.0.0.1:8080"'
+    echo 'oracle_address = "127.0.0.1:${W_PORT}80"'
     echo ""
     echo "# Client Timeout is the time that the client is willing to wait for responses from"
     echo "# the oracle before timing out."
@@ -38,10 +38,12 @@ print_instructions() {
     echo "# the oracle and the app."
     echo 'metrics_enabled = "true"'
     echo ""
+    printLine
     echo -e "${GREEN}Then, restart the Warden and Slinky services:${NC}"
     echo "1. Restart the services:"
     echo "   sudo systemctl daemon-reload && sudo systemctl restart wardend && sudo systemctl restart slinkyd"
     echo ""
+    printLine
     echo "To view the service logs:"
     echo "   journalctl -fu slinkyd --no-hostname"
 }
@@ -89,7 +91,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which slinky) --market-map-endpoint 127.0.0.1:${W_PORT}090
+ExecStart=$(which slinky) --market-map-endpoint 127.0.0.1:${W_PORT}90 --port ${W_PORT}80
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
