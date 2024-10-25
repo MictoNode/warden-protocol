@@ -180,7 +180,7 @@ s%:26657%:${W_PORT}57%g;
 s%:6060%:${W_PORT}60%g;
 s%:26656%:${W_PORT}56%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${W_PORT}56\"%;
-s%:26660%:${W_PORT}60%g" $HOME/.warden/config/config.toml
+s%:26660%:${W_PORT}61%g" $HOME/.warden/config/config.toml
 
 # Seed ve peer yapılandırması
 printGreen "9. Setting up peers and seeds..." && sleep 1
