@@ -185,7 +185,7 @@ s%:26660%:${W_PORT}61%g" $HOME/.warden/config/config.toml
 # Seed ve peer yapılandırması
 printGreen "9. Setting up peers and seeds..." && sleep 1
 SEEDS="2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656"
-PEERS="7b26de79a9d13e74987d1053055f1c88502ec852@warden-chiado-peers.mictonode.com:11956,2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656,fcaffd41eb7e3647fa953607449ff5e371c236b8@195.26.245.67:31656,5461e7642520a1f8427ffaa57f9d39cf345fcd47@54.72.190.0:26656"
+PEERS="d8106774d544591c0dd5b073ac0fd2e481669cf0@warden-testnet-peers.mictonode.com:11956,2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656,fcaffd41eb7e3647fa953607449ff5e371c236b8@195.26.245.67:31656,5461e7642520a1f8427ffaa57f9d39cf345fcd47@54.72.190.0:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
 
