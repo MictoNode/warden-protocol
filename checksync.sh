@@ -10,7 +10,7 @@ printLine() {
 
 while true; do
   local_height=$(wardend status | jq -r '.sync_info.latest_block_height')
-  network_height=$(curl -s https://warden-chiado-rpc.mictonode.com/status | jq -r '.result.sync_info.latest_block_height')
+  network_height=$(curl -s https://warden-testnet-rpc.mictonode.com/status | jq -r '.result.sync_info.latest_block_height')
   blocks_left=$((network_height - local_height))
 
   printLine
