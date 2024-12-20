@@ -110,7 +110,7 @@ echo $(go version) && sleep 1
 printGreen "3. Downloading Warden binary and setting up..." && sleep 1
 cd $HOME
 mkdir -p $HOME/.warden/cosmovisor/genesis/bin/
-wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.2/wardend_Linux_x86_64.zip
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.4/wardend_Linux_x86_64.zip
 unzip wardend_Linux_x86_64.zip
 chmod +x wardend
 rm -rf wardend_Linux_x86_64.zip
