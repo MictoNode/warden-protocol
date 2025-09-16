@@ -1,22 +1,13 @@
 {
   "app_name": "wardend",
-  "app_version": "v0.5.1",
-  "genesis_time": "2024-09-04T10:02:35.092348324Z",
-  "chain_id": "chiado_10010-1",
+  "app_version": "v0.7.0-rc1",
+  "genesis_time": "2025-08-22T07:47:09.037022Z",
+  "chain_id": "barra_9191-1",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
     "06-solomachine": null,
     "07-tendermint": null,
-    "act": {
-      "params": {
-        "max_pending_time": "86400s",
-        "max_completed_time": "604800s",
-        "prune_check_block_frequency": "10000"
-      },
-      "actions": [],
-      "templates": []
-    },
     "auth": {
       "params": {
         "max_memo_characters": "256",
@@ -28,35 +19,35 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "warden1lcfxun68lyc7g3mvgwyhhd8vrw5raug3kz5zcf",
+          "address": "warden13phmdfhzqu3lp70ma38zaes8khjlurg465snpq",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "warden13sgmj3qgkmt4zj6t657sly5avdhlrp0etvhr99",
+          "address": "warden1uh3pz9lrrah2zpgveaucxl3dapsza4fq75jndz",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "warden19pr4wa3sxpp4p3jl50npdxkfkv8dv4st83d767",
+          "address": "warden1wfssd9tlvk46cgh59d8sxzg99ga5zdq09pfwml",
           "pub_key": null,
           "account_number": "2",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "warden1hel4gead4q7m6cyr3q82w5wjam2qeranc4qdc2",
+          "address": "warden1u23wx93ydlayhz365rk0ld03e62a9eegrg6mlt",
           "pub_key": null,
           "account_number": "3",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "warden1m3ntumvjhnz4gq9cghxl48mfhjthpzrnajtf3u",
+          "address": "warden1k893z2mv22tmamhakx6xctm4y4t32xmmcp2a2j",
           "pub_key": null,
           "account_number": "4",
           "sequence": "0"
@@ -73,25 +64,7 @@
       },
       "balances": [
         {
-          "address": "warden19pr4wa3sxpp4p3jl50npdxkfkv8dv4st83d767",
-          "coins": [
-            {
-              "denom": "award",
-              "amount": "8000000000000000000000000"
-            }
-          ]
-        },
-        {
-          "address": "warden13sgmj3qgkmt4zj6t657sly5avdhlrp0etvhr99",
-          "coins": [
-            {
-              "denom": "award",
-              "amount": "120000000000000000000000000"
-            }
-          ]
-        },
-        {
-          "address": "warden1hel4gead4q7m6cyr3q82w5wjam2qeranc4qdc2",
+          "address": "warden1wfssd9tlvk46cgh59d8sxzg99ga5zdq09pfwml",
           "coins": [
             {
               "denom": "award",
@@ -100,7 +73,7 @@
           ]
         },
         {
-          "address": "warden1m3ntumvjhnz4gq9cghxl48mfhjthpzrnajtf3u",
+          "address": "warden13phmdfhzqu3lp70ma38zaes8khjlurg465snpq",
           "coins": [
             {
               "denom": "award",
@@ -109,11 +82,29 @@
           ]
         },
         {
-          "address": "warden1lcfxun68lyc7g3mvgwyhhd8vrw5raug3kz5zcf",
+          "address": "warden1k893z2mv22tmamhakx6xctm4y4t32xmmcp2a2j",
           "coins": [
             {
               "denom": "award",
-              "amount": "120000000000000000000000000"
+              "amount": "497000000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "warden1u23wx93ydlayhz365rk0ld03e62a9eegrg6mlt",
+          "coins": [
+            {
+              "denom": "award",
+              "amount": "500000000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "warden1uh3pz9lrrah2zpgveaucxl3dapsza4fq75jndz",
+          "coins": [
+            {
+              "denom": "award",
+              "amount": "1000000000000000000000000"
             }
           ]
         }
@@ -121,32 +112,22 @@
       "supply": [
         {
           "denom": "award",
-          "amount": "250000000000000000000000000"
+          "amount": "1000000000000000000000000000"
         }
       ],
       "denom_metadata": [],
       "send_enabled": []
-    },
-    "capability": {
-      "index": "1",
-      "owners": []
     },
     "circuit": {
       "account_permissions": [],
       "disabled_type_urls": []
     },
     "consensus": null,
-    "crisis": {
-      "constant_fee": {
-        "denom": "award",
-        "amount": "1000000000000000"
-      }
-    },
     "distribution": {
       "params": {
         "community_tax": "0.020000000000000000",
-        "base_proposer_reward": "0.000000000000000000",
-        "bonus_proposer_reward": "0.000000000000000000",
+        "base_proposer_reward": "0.010000000000000000",
+        "bonus_proposer_reward": "0.040000000000000000",
         "withdraw_addr_enabled": true
       },
       "fee_pool": {
@@ -161,6 +142,16 @@
       "delegator_starting_infos": [],
       "validator_slash_events": []
     },
+    "erc20": {
+      "params": {
+        "enable_erc20": true,
+        "permissionless_registration": true
+      },
+      "token_pairs": [],
+      "allowances": [],
+      "native_precompiles": [],
+      "dynamic_precompiles": []
+    },
     "evidence": {
       "evidence": []
     },
@@ -169,41 +160,9 @@
       "params": {
         "evm_denom": "award",
         "extra_eips": [
-          "ethereum_3855"
+          "3855"
         ],
-        "chain_config": {
-          "homestead_block": "0",
-          "dao_fork_block": "0",
-          "dao_fork_support": true,
-          "eip150_block": "0",
-          "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "eip155_block": "0",
-          "eip158_block": "0",
-          "byzantium_block": "0",
-          "constantinople_block": "0",
-          "petersburg_block": "0",
-          "istanbul_block": "0",
-          "muir_glacier_block": "0",
-          "berlin_block": "0",
-          "london_block": "0",
-          "arrow_glacier_block": "0",
-          "gray_glacier_block": "0",
-          "merge_netsplit_block": "0",
-          "shanghai_block": "0",
-          "cancun_block": "0"
-        },
-        "allow_unprotected_txs": false,
-        "active_static_precompiles": [
-          "0x0000000000000000000000000000000000000100",
-          "0x0000000000000000000000000000000000000400",
-          "0x0000000000000000000000000000000000000800",
-          "0x0000000000000000000000000000000000000801",
-          "0x0000000000000000000000000000000000000802",
-          "0x0000000000000000000000000000000000000803",
-          "0x0000000000000000000000000000000000000804",
-          "0x0000000000000000000000000000000000000900",
-          "0x0000000000000000000000000000000000000901"
-        ],
+        "evm_channels": [],
         "access_control": {
           "create": {
             "access_type": "ACCESS_TYPE_PERMISSIONLESS",
@@ -214,22 +173,28 @@
             "access_control_list": []
           }
         },
-        "evm_channels": [
-          "channel-10",
-          "channel-31",
-          "channel-83"
-        ]
-      }
+        "active_static_precompiles": [
+          "0x0000000000000000000000000000000000000100",
+          "0x0000000000000000000000000000000000000400",
+          "0x0000000000000000000000000000000000000800",
+          "0x0000000000000000000000000000000000000801",
+          "0x0000000000000000000000000000000000000802",
+          "0x0000000000000000000000000000000000000803",
+          "0x0000000000000000000000000000000000000804",
+          "0x0000000000000000000000000000000000000805",
+          "0x0000000000000000000000000000000000000900",
+          "0x0000000000000000000000000000000000000901",
+          "0x0000000000000000000000000000000000000902",
+          "0x0000000000000000000000000000000000000903",
+          "0x0000000000000000000000000000000000000904",
+          "0x0000000000000000000000000000000000000905"
+        ],
+        "history_serve_window": "8192"
+      },
+      "preinstalls": []
     },
     "feegrant": {
       "allowances": []
-    },
-    "feeibc": {
-      "identified_fees": [],
-      "fee_enabled_channels": [],
-      "registered_payees": [],
-      "registered_counterparty_payees": [],
-      "forward_relayers": []
     },
     "feemarket": {
       "params": {
@@ -237,8 +202,8 @@
         "base_fee_change_denominator": 8,
         "elasticity_multiplier": 2,
         "enable_height": "0",
-        "base_fee": "1000000000",
-        "min_gas_price": "0.000000000000000000",
+        "base_fee": "10000.000000000000000000",
+        "min_gas_price": "1.00000000000000000",
         "min_gas_multiplier": "0.500000000000000000"
       },
       "block_gas": "0"
@@ -251,7 +216,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "wardenguard",
+                  "moniker": "val",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
@@ -264,10 +229,10 @@
                 },
                 "min_self_delegation": "1",
                 "delegator_address": "",
-                "validator_address": "wardenvaloper1m3ntumvjhnz4gq9cghxl48mfhjthpzrnvffv7d",
+                "validator_address": "wardenvaloper13phmdfhzqu3lp70ma38zaes8khjlurg4t0jkw3",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "FVZzsNI4SbidDL5CfKeQMRK/2Y0fKpB357gO7mMKNiQ="
+                  "key": "IiQ3sV9k0Hb6oPL9bHW40ypcgwqXacInJCyKwE50jZ8="
                 },
                 "value": {
                   "denom": "award",
@@ -275,8 +240,10 @@
                 }
               }
             ],
-            "memo": "990cf72d753b44b6fb26de0d9851608e66066b98@172.17.0.2:26656",
+            "memo": "c53c5fc7a5de4f953bd0201b6a93d6fed07837d7@192.168.88.75:26656",
             "timeout_height": "0",
+            "unordered": false,
+            "timeout_timestamp": null,
             "extension_options": [],
             "non_critical_extension_options": []
           },
@@ -284,8 +251,8 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "AmDXny26nBTvdApBtgLJhxdI8Atp7xZQIWfJgpoA6XRE"
+                  "@type": "/cosmos.evm.crypto.v1.ethsecp256k1.PubKey",
+                  "key": "AwCl/CsI/i4B1rN85+rAaIJer9vVfUCiMVda5RUsNFD3"
                 },
                 "mode_info": {
                   "single": {
@@ -296,7 +263,12 @@
               }
             ],
             "fee": {
-              "amount": [],
+              "amount": [
+                {
+                  "denom": "award",
+                  "amount": "1000000000000000000"
+                }
+              ],
               "gas_limit": "200000",
               "payer": "",
               "granter": ""
@@ -304,18 +276,10 @@
             "tip": null
           },
           "signatures": [
-            "vMlr7nFl/+WcEWde3zlPN0KaT6nefEL02nFGCuH9rdFyMQpZXYKsjAnpHMCQ6KCCZcwexZbnWn4DULfRV0vX4AA="
+            "ewNoXYcISSd7JQI0STHauOMuA2TbvQLwIdkOPHwLNZ8s6fTSoAAAvCOVq5bTb6ngrS+0ebjwPXwkXrwjzHByowA="
           ]
         }
       ]
-    },
-    "gmp": {
-      "params": {
-        "gmp_address": "",
-        "gmp_channel": "",
-        "gmp_timeout": "0",
-        "fee_recipient": ""
-      }
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -329,23 +293,23 @@
         "min_deposit": [
           {
             "denom": "award",
-            "amount": "1000000000000000000000"
+            "amount": "100000000000000000000"
           }
         ],
-        "max_deposit_period": "300s",
-        "voting_period": "86400s",
+        "max_deposit_period": "86400s",
+        "voting_period": "432000s",
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000",
-        "min_initial_deposit_ratio": "0.000000000000000000",
+        "min_initial_deposit_ratio": "0.020000000000000000",
         "proposal_cancel_ratio": "0.500000000000000000",
         "proposal_cancel_dest": "",
-        "expedited_voting_period": "180s",
+        "expedited_voting_period": "172200s",
         "expedited_threshold": "0.667000000000000000",
         "expedited_min_deposit": [
           {
             "denom": "award",
-            "amount": "5000000000000000000000"
+            "amount": "500000000000000000000"
           }
         ],
         "burn_vote_quorum": false,
@@ -394,16 +358,17 @@
         "send_sequences": [],
         "recv_sequences": [],
         "ack_sequences": [],
-        "next_channel_sequence": "0",
-        "params": {
-          "upgrade_timeout": {
-            "height": {
-              "revision_number": "0",
-              "revision_height": "0"
-            },
-            "timestamp": "600000000000"
-          }
-        }
+        "next_channel_sequence": "0"
+      },
+      "client_v2_genesis": {
+        "counterparty_infos": []
+      },
+      "channel_v2_genesis": {
+        "acknowledgements": [],
+        "commitments": [],
+        "receipts": [],
+        "async_packets": [],
+        "send_sequences": []
       }
     },
     "interchainaccounts": {
@@ -5106,9 +5071,9 @@
       "last_updated": "0",
       "params": {
         "market_authorities": [
-          "warden1lcfxun68lyc7g3mvgwyhhd8vrw5raug3kz5zcf"
+          "warden10d07y265gmmuvt4z0w9aw880jnsr700j2vgu38"
         ],
-        "admin": "warden1lcfxun68lyc7g3mvgwyhhd8vrw5raug3kz5zcf"
+        "admin": "warden10d07y265gmmuvt4z0w9aw880jnsr700j2vgu38"
       }
     },
     "mint": {
@@ -5119,10 +5084,10 @@
       "params": {
         "mint_denom": "award",
         "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
+        "inflation_max": "0.100000000000000000",
+        "inflation_min": "0.020000000000000000",
         "goal_bonded": "0.670000000000000000",
-        "blocks_per_year": "6311520"
+        "blocks_per_year": "10512000"
       }
     },
     "oracle": {
@@ -5707,22 +5672,29 @@
       "next_id": 64
     },
     "params": null,
+    "precisebank": {
+      "balances": [],
+      "remainder": "0"
+    },
     "runtime": null,
+    "sched": {
+      "params": {}
+    },
     "slashing": {
       "params": {
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600s",
+        "signed_blocks_window": "10000",
+        "min_signed_per_window": "0.750000000000000000",
+        "downtime_jail_duration": "60s",
         "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
+        "slash_fraction_downtime": "0.000000000000000000"
       },
       "signing_infos": [],
       "missed_blocks": []
     },
     "staking": {
       "params": {
-        "unbonding_time": "240s",
-        "max_validators": 100,
+        "unbonding_time": "1814400s",
+        "max_validators": 40,
         "max_entries": 7,
         "historical_entries": 10000,
         "bond_denom": "award",
@@ -5738,7 +5710,7 @@
     },
     "transfer": {
       "port_id": "transfer",
-      "denom_traces": [],
+      "denoms": [],
       "params": {
         "send_enabled": true,
         "receive_enabled": true
@@ -5748,38 +5720,9 @@
     "upgrade": {},
     "vesting": {},
     "warden": {
-      "keychains": [
-        {
-          "id": "1",
-          "creator": "warden1gp4dakk5sc2f47aludrk8he5r4ln0p2zwm3nq8",
-          "name": "OCP KMS",
-          "admins": [
-            "warden1gp4dakk5sc2f47aludrk8he5r4ln0p2zwm3nq8"
-          ],
-          "writers": [
-            "warden1hel4gead4q7m6cyr3q82w5wjam2qeranc4qdc2"
-          ],
-          "fees": {
-            "key_req": [],
-            "sig_req": []
-          },
-          "description": "OCP KMS",
-          "url": "",
-          "keybase_id": null
-        }
-      ],
-      "spaces": [
-        {
-          "id": "1",
-          "creator": "warden1psatym7teulev29xcede85acn33ptphpx443j6",
-          "owners": [
-            "warden1psatym7teulev29xcede85acn33ptphpx443j6"
-          ],
-          "approve_admin_template_id": "0",
-          "approve_sign_template_id": "0"
-        }
-      ],
       "params": {},
+      "keychains": [],
+      "spaces": [],
       "keys": [],
       "key_requests": [],
       "sign_requests": []
@@ -5787,7 +5730,7 @@
     "wasm": {
       "params": {
         "code_upload_access": {
-          "permission": "Everybody",
+          "permission": "Nobody",
           "addresses": []
         },
         "instantiate_default_permission": "Everybody"
@@ -5800,12 +5743,12 @@
   "consensus": {
     "params": {
       "block": {
-        "max_bytes": "22020096",
+        "max_bytes": "12582912",
         "max_gas": "-1"
       },
       "evidence": {
-        "max_age_num_blocks": "100000",
-        "max_age_duration": "172800000000000",
+        "max_age_num_blocks": "604800",
+        "max_age_duration": "1814400",
         "max_bytes": "1048576"
       },
       "validator": {
